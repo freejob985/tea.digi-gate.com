@@ -179,7 +179,7 @@ class CategoriesController extends Controller
 
     public function home(){
         $title = __t('topics');
-
+dd(1);
         return view(theme('categories'), compact('title'));
     }
 
