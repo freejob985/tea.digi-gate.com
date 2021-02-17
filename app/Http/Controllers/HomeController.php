@@ -20,7 +20,7 @@ class HomeController extends Controller
         $popular_courses = Course::publish()->whereIsPopular(1)->orderBy('popular_added_at', 'desc')->take(8)->get();
         $posts = Post::post()->publish()->take(3)->get();
         $News = News::post()->publish()->take(3)->get();
-        return view(theme('index'), compact('title', 'new_courses', 'featured_courses', 'popular_courses', 'posts','titles'));
+        return view(theme('index'), compact('title', 'new_courses', 'featured_courses', 'popular_courses', 'posts','titles','News'));
     }
 
     public function courses(Request $r){
