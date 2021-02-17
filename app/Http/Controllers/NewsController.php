@@ -189,7 +189,7 @@ class NewsController extends Controller
     }
 
     public function blog(){
-        $title = __t('blog');
+        $title ="الأخبار";
         $posts = News::post()->publish()->paginate(20);
         return view(theme('News'), compact('title', 'posts'));
     }
