@@ -146,7 +146,7 @@ class NewsController extends Controller
         ];
 
         News::create($data);
-        return redirect(route('pages'))->with('success', __a('page_has_been_created'));
+        return redirect(route('pages.News'))->with('success', __a('page_has_been_created'));
     }
 
     /**
