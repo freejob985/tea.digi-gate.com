@@ -13,11 +13,12 @@ class HomeController extends Controller
     public function index(){
         //"themes.edugator.index"
         $title = __t('home_page_title');
+        $titles = __t('topics');
         $new_courses = Course::publish()->orderBy('created_at', 'desc')->take(12)->get();
         $featured_courses = Course::publish()->whereIsFeatured(1)->orderBy('featured_at', 'desc')->take(6)->get();
         $popular_courses = Course::publish()->whereIsPopular(1)->orderBy('popular_added_at', 'desc')->take(8)->get();
         $posts = Post::post()->publish()->take(3)->get();
-        return view(theme('index'), compact('title', 'new_courses', 'featured_courses', 'popular_courses', 'posts'));
+        return view(theme('index'), compact('title', 'new_courses', 'featured_courses', 'popular_courses', 'posts','titles'));
     }
 
     public function courses(Request $r){
