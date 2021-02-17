@@ -376,3 +376,9 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'admin'] ], function()
 Route::get('blog', 'PostController@blog')->name('blog');
 Route::get('{slug}', 'PostController@postSingle')->name('post');
 Route::get('post/{id?}', 'PostController@postProxy')->name('post_proxy');
+
+
+
+// Route::get('blog', 'PostController@blog')->name('blog');
+// Route::get('{slug}', 'PostController@postSingle')->name('post');
+// Route::get('post/{id?}', 'PostController@postProxy')->name('post_proxy');
