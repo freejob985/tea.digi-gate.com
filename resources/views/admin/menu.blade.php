@@ -20,6 +20,14 @@
             </li>
 
             <li>
+                <a href="#"><i class="la la-newspaper-o fa-fw"></i> News<span class="la arrow"></span></a>
+                <ul class="nav nav-second-level" style="display: none;">
+                    <li> <a href="{{ route('News') }}">@lang('admin.posts')</a> </li>
+                    <li> <a href="{{ route('pages') }}">@lang('admin.pages')</a> </li>
+                </ul><!-- /.nav-second-level -->
+            </li>
+
+            <li>
                 <a href="{{route('media_manager')}}"><i class="la la-photo-video"></i> @lang('admin.media_manager')</a>
             </li>
 
