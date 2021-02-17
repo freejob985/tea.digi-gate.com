@@ -108,7 +108,7 @@
                     <div class="course-intro-stats-wrapper mb-4">
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
 
                                 <div class="course-whats-included-box course-widget p-4">
                                     <h4 class="mb-4">{{__t('whats_included')}}</h4>
@@ -139,7 +139,7 @@
 
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
 
                                 @if($course->video_info())
                                     @include(theme('video-player'), ['model' => $course, 'video_caption' => __t('preview')])
