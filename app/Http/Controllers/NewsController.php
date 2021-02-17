@@ -191,7 +191,7 @@ class NewsController extends Controller
     public function blog(){
         $title = __t('blog');
         $posts = News::post()->publish()->paginate(20);
-        return view(theme('blog'), compact('title', 'posts'));
+        return view(theme('News'), compact('title', 'posts'));
     }
 
     public function authorPosts($id){
