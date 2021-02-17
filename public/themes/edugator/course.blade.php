@@ -1,5 +1,5 @@
 @extends('layouts.theme')
-
+@dd("Catch errors for script and full tracking ( 1)");
 @section('content')
 
     @php
