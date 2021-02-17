@@ -108,6 +108,16 @@
                         <div class="row">
                             <div class="col-md-12">
 
+                                @if($course->video_info())
+                                    @include(theme('video-player'), ['model' => $course, 'video_caption' => __t('preview')])
+                                @else
+                                    <img src="{{media_image_uri($course->thumbnail_id)->image_md}}" class="img-fluid" />
+                                @endif
+
+
+                            </div>
+                            <div class="col-md-12">
+
                                 <div class="course-whats-included-box course-widget p-4">
                                     <h4 class="mb-4">{{__t('whats_included')}}</h4>
 
@@ -137,16 +147,7 @@
 
                             </div>
 
-                            <div class="col-md-12">
-
-                                @if($course->video_info())
-                                    @include(theme('video-player'), ['model' => $course, 'video_caption' => __t('preview')])
-                                @else
-                                    <img src="{{media_image_uri($course->thumbnail_id)->image_md}}" class="img-fluid" />
-                                @endif
-
-
-                            </div>
+                         
                         </div>
 
                     </div>
