@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 
 @section('page-header-right')
-    <a href="{{route('create_post')}}" class="btn btn-success mr-3" data-toggle="tooltip" title="{{__a('create_new_post')}}"> <i class="la la-plus-circle"></i> {{__a('create_new_post')}} </a>
+    <a href="{{route('create_News')}}" class="btn btn-success mr-3" data-toggle="tooltip" title="{{__a('create_new_post')}}"> <i class="la la-plus-circle"></i> {{__a('create_new_post')}} </a>
 
-    <a href="{{route('posts')}}" class="btn btn-info" data-toggle="tooltip" title="{{__a('all_posts')}}"> <i class="la la-list"></i> {{__a('all_posts')}} </a>
+    <a href="{{route('News')}}" class="btn btn-info" data-toggle="tooltip" title="{{__a('all_posts')}}"> <i class="la la-list"></i> {{__a('all_posts')}} </a>
 
 @endsection
 

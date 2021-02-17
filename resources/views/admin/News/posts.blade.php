@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('page-header-right')
-    <a href="{{route('create_post')}}" class="btn btn-success" data-toggle="tooltip" title="{{__a('create_new_post')}}"> <i class="la la-plus-circle"></i> {{__a('create_new_post')}} </a>
+    <a href="{{route('create_News')}}" class="btn btn-success" data-toggle="tooltip" title="{{__a('create_new_post')}}"> <i class="la la-plus-circle"></i> {{__a('create_new_post')}} </a>
 @endsection
 
 @section('content')
@@ -59,10 +59,10 @@
                                 <td>{{$post->published_time}}</td>
 
                                 <td>
-                                    <a href="{{route('edit_post',$post->id)}}" class="btn btn-primary">
+                                    <a href="{{route('edit_News',$post->id)}}" class="btn btn-primary">
                                         <i class="la la-edit"></i>
                                     </a>
-                                    <a href="{{route('post', $post->slug)}}" class="btn btn-purple"><i class="la la-eye"></i> </a>
+                                    <a href="{{route('News', $post->slug)}}" class="btn btn-purple"><i class="la la-eye"></i> </a>
                                 </td>
                             </tr>
                         @endforeach

@@ -80,7 +80,7 @@ class NewsController extends Controller
         ];
 
         News::create($data);
-        return redirect(route('posts'))->with('success', __a('post_has_been_created'));
+        return redirect(route('News'))->with('success', __a('post_has_been_created'));
     }
 
 
