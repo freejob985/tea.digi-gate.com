@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('page-header-right')
-    <a href="{{route('create_page')}}" class="btn btn-success" data-toggle="tooltip" title="{{__a('create_new_page')}}"> <i class="la la-plus-circle"></i> {{__a('create_new_page')}} </a>
+    <a href="{{route('create_page.News')}}" class="btn btn-success" data-toggle="tooltip" title="{{__a('create_new_page')}}"> <i class="la la-plus-circle"></i> {{__a('create_new_page')}} </a>
 @endsection
 
 @section('content')
