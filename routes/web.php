@@ -275,6 +275,22 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'admin'] ], function()
         Route::post('page/edit/{id}', 'PostController@updatePage');
     });
 
+
+
+    Route::group(['prefix'=>'News'], function(){
+        Route::get('/', 'NewsController@posts')->name('News');
+        Route::get('post/create', 'NewsController@createPost')->name('create_News');
+        Route::post('post/create', 'NewsController@storePost');
+        Route::get('post/edit/{id}', 'NewsController@editPost')->name('edit_News');
+        Route::post('post/edit/{id}', 'NewsController@updatePost');
+
+        Route::get('page', 'NewsController@index')->name('pages');
+        Route::get('page/create', 'NewsController@create')->name('create_page');
+        Route::post('page/create', 'NewsController@store');
+        Route::get('page/edit/{id}', 'NewsController@edit')->name('edit_page');
+        Route::post('page/edit/{id}', 'NewsController@updatePage');
+    });
+
     Route::group(['prefix'=>'media_manager'], function() {
         Route::get('/', 'MediaController@mediaManager')->name('media_manager');
         Route::post('media-update', 'MediaController@mediaManagerUpdate')->name('media_update');
