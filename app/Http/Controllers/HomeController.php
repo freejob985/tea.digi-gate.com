@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Course;
 use App\Post;
+use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 
@@ -18,6 +19,7 @@ class HomeController extends Controller
         $featured_courses = Course::publish()->whereIsFeatured(1)->orderBy('featured_at', 'desc')->take(6)->get();
         $popular_courses = Course::publish()->whereIsPopular(1)->orderBy('popular_added_at', 'desc')->take(8)->get();
         $posts = Post::post()->publish()->take(3)->get();
+        $News = News::post()->publish()->take(3)->get();
         return view(theme('index'), compact('title', 'new_courses', 'featured_courses', 'popular_courses', 'posts','titles'));
     }
 

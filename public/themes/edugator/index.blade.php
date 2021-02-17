@@ -220,6 +220,66 @@
 
     @endif
 
+
+
+
+    @if($News->count())
+    <div class="home-section-wrap home-blog-section-wrapper py-5">
+
+        <div class="container">
+
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <div class="section-header-wrap">
+                        <h3 class="section-title">{{__t('latest_blog_text')}}</h3>
+                        <p class="section-subtitle">{{__t('latest_blog_desc')}}</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                @foreach($News as $post)
+                    <div class="col-lg-4 mb-4">
+                        <div class="home-blog-card">
+                            <a href="{{$post->url}}">
+                                <img src="{{$post->thumbnail_url->image_md}}" alt="{{$post->title}}" class="img-fluid">
+                            </a>
+                            <div class="excerpt px-4">
+                                <h2><a href="{{$post->url}}">{{$post->title}}</a></h2>
+                                <div class="post-meta d-flex justify-content-between">
+                                    <span>
+                                        <i class="la la-user"></i>
+                                        <a href="{{route('profile', $post->user_id)}}">
+                                            {{$post->author->name}}
+                                        </a>
+                                    </span>
+                                    <span>&nbsp;<i class="la la-calendar"></i>&nbsp; {{$post->published_time}}</span>
+                                </div>
+                                <p class="mt-4">
+                                    <a href="{{$post->url}}"><strong>READ MORE <i class="la la-arrow-right"></i> </strong></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="btn-see-all-posts-wrapper pt-4">
+                <div class="row">
+                    <div class="col-md-12 d-flex">
+                        <a href="{{route('blog')}}" class="btn btn-lg btn-theme-primary ml-auto mr-auto">
+                            <i class="la la-blog"></i> See All Posts
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @endif
+
     <div class="home-section-wrap home-cta-wrapper py-5 ">
 
         <div class="home-partners-logo-section pb-5 mb-5 text-center">
