@@ -46,7 +46,7 @@
                             <li><a href="{{route('popular_courses')}}">{{__t('popular_courses')}}</a> </li>
                             <li><a href="{{route('featured_courses')}}">{{__t('featured_courses')}}</a> </li>
                             <li><a href="{{route('blog')}}">{{__t('blog')}}</a> </li>
-                            <li><a href="{{route('News.post.front')}}">News</a> </li>
+                            <li><a href="{{route('News.front')}}">News</a> </li>
                             <li><a href="{{route('post_proxy')}}">{{__t('about_us')}}</a> </li>
                             <li><a href="{{route('register')}}">{{__t('signup')}}</a> </li>
                             <li><a href="#">Contact Us</a> </li>
