@@ -45,7 +45,7 @@
                                 </div>
 
                                 <p class="mt-4">
-                                    <a href="{{$post->url}}"><strong>READ MORE <i class="la la-arrow-right"></i> </strong></a>
+                                    <a href="{{ route('post.News', ['slug'=>$post->url]) }}"><strong>READ MORE <i class="la la-arrow-right"></i> </strong></a>
                                 </p>
                             </div>
                         </div>
