@@ -209,9 +209,9 @@ class NewsController extends Controller
         $title = $post->title;
 
         if ($post->type === 'post'){
-            return view(theme('single_post'), compact('title', 'post'));
+            return view(theme('single_post_news'), compact('title', 'post'));
         }
-        return view(theme('single_page'), compact('title', 'post'));
+        return view(theme('single_post_news'), compact('title', 'post'));
     }
 
     public function postProxy($id){
