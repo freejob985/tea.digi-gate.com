@@ -23,9 +23,6 @@
                 <a href="#"><i class="la la-newspaper-o fa-fw"></i> News<span class="la arrow"></span></a>
                 <ul class="nav nav-second-level" style="display: none;">
                     <li> <a href="{{ route('News') }}">News</a> </li>
-                    <li style="
-                    display: none;
-                "> <a href="{{ route('pages.News') }}">News pages </a> </li>
                 </ul><!-- /.nav-second-level -->
             </li>
 

@@ -284,7 +284,6 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'admin'] ], function()
         Route::get('News/edit/{id}', 'NewsController@editPost')->name('edit_News');
         Route::post('News/edit/{id}', 'NewsController@updatePost');
 
-        Route::get('page', 'NewsController@index')->name('pages.News');
         Route::get('page/create', 'NewsController@create')->name('create_page.News');
         Route::post('page/create', 'NewsController@store');
         Route::get('page/edit/{id}', 'NewsController@edit')->name('edit_page.News');
@@ -376,8 +375,3 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'admin'] ], function()
 Route::get('blog', 'PostController@blog')->name('blog');
 Route::get('{slug}', 'PostController@postSingle')->name('post');
 Route::get('post/{id?}', 'PostController@postProxy')->name('post_proxy');
-
-
-
-Route::get('blog', 'NewsController@blog')->name('News.front');
-Route::get('{slug}', 'NewsController@postSingle')->name('post.News');
