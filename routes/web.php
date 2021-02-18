@@ -379,6 +379,8 @@ Route::get('post/{id?}', 'PostController@postProxy')->name('post_proxy');
 
 
 Route::get('News/post', 'NewsController@blog')->name('News.front');
+Route::get('{slug}', 'NewsController@postSingle')->name('post.News');
+
 
 
 
